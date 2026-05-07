@@ -1,47 +1,37 @@
 # 🚦 AI Helmet Surveillance System
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg)](https://streamlit.io/)
 [![YOLOv11](https://img.shields.io/badge/YOLO-v11-green.svg)](https://ultralytics.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A premium computer vision application designed to detect helmet violations in real-time. Built with **YOLOv11** and **Streamlit**, this system provides a seamless interface for traffic surveillance and violation tracking.
+A high-performance computer vision application designed to automate traffic safety monitoring. Built with **YOLOv11** and **Streamlit**, this system detects motorcyclists and identifies helmet violations in real-time, providing a seamless interface for traffic surveillance.
 
-**Developed by: [Shaikh Akram](https://github.com/Akram-X207)**
+**Live Demo:** [helmet-surveilence-system.streamlit.app](https://helmet-surveilence-system.streamlit.app/)
 
 ---
 
 ## ✨ Features
 
-*   **Multi-Source Input**: Upload images, videos, or **paste directly from clipboard**.
-*   **Intelligent Detection**:
+*   **Real-time Detection**: Uses YOLOv11 for high-speed object detection in both images and videos.
+*   **Intelligent Logic**: 
     *   Detects Motorcyclists, Helmets, No-Helmets, and Number Plates.
-    *   Smart Logic: Only flags riders *without* helmets.
-    *   Spatial Mapping: Automatically links riders to their respective number plates.
-*   **Premium UI/UX**:
-    *   Modern Dark Theme with custom CSS.
-    *   Real-time processing preview for videos.
-    *   Interactive statistics dashboard.
-*   **Violation Reports**: Download processed images/videos with bounding boxes and labels.
-
----
-
-## 🚀 How It Works
-
-1.  **Detection Phase**: The YOLOv11 model scans the frame for four primary classes.
-2.  **Validation Logic**: 
-    *   The system checks if a `no-helmet` detection resides within a `motorcyclist` boundary.
-    *   It then searches for a `plate` within the same rider's area.
-3.  **Reporting**: If a violation is confirmed, the system highlights the rider in red and the plate in green.
+    *   **Spatial Mapping**: Automatically associates a violation (no-helmet) and a license plate with the correct rider.
+*   **Multi-Source Input**: 
+    *   Upload images/videos (JPG, PNG, MP4, MOV).
+    *   **Direct Paste**: Support for pasting images from the clipboard.
+*   **Downloadable Reports**: Save processed results with annotated bounding boxes for law enforcement records.
+*   **Clean & Modern UI**: A user-friendly interface built with Streamlit's native components.
 
 ---
 
 ## 🛠️ Tech Stack
 
-*   **Core**: Python 3.8+
-*   **AI Engine**: YOLOv11 (Ultralytics)
-*   **Image Processing**: OpenCV, NumPy, PIL
+*   **Language**: Python 3.10
+*   **AI Framework**: YOLOv11 (Ultralytics)
+*   **Computer Vision**: OpenCV
 *   **Web Framework**: Streamlit
-*   **Deployment**: Ready for Streamlit Cloud / Hugging Face Spaces
+*   **Deployment**: Streamlit Cloud / GitHub
 
 ---
 
@@ -69,34 +59,40 @@ streamlit run app.py
 
 ```
 .
-├── app.py              # Main Streamlit application
-├── no_helmet.pt        # Pre-trained YOLOv11 model
-├── requirements.txt    # Project dependencies
-├── packages.txt        # System-level dependencies (for Linux/Cloud)
+├── app.py              # Main application logic
+├── no_helmet.pt        # Pre-trained YOLOv11 model weights
+├── requirements.txt    # Python dependencies
+├── packages.txt        # System-level dependencies (for Streamlit Cloud)
 ├── runtime.txt         # Python runtime version
+├── .streamlit/         # Streamlit configuration
 └── README.md           # Project documentation
 ```
 
 ---
 
-## 🛡️ Model Details
+## 🤝 Contributing (Open Source)
 
-*   **Algorithm**: YOLOv11
-*   **Classes**: `motorcyclist`, `helmet`, `no-helmet`, `plate`
-*   **Optimization**: Cached model loading for high performance.
+This project is **Open Source** and I welcome contributions! Whether it's fixing a bug, adding a new feature, or improving documentation:
 
----
-
-## 🤝 Contributing
-
-This project is maintained by **Shaikh Akram**. Feel free to fork, open issues, or submit PRs to improve the detection accuracy or UI.
+1.  **Fork** the repository.
+2.  **Create** a new branch (`git checkout -b feature-branch`).
+3.  **Commit** your changes (`git commit -m "Add some feature"`).
+4.  **Push** to the branch (`git push origin feature-branch`).
+5.  **Open** a Pull Request.
 
 ---
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ---
 
-**Link to Profile:** [github.com/Akram-X207](https://github.com/Akram-X207)
+## 👨‍💻 Developed By
+
+**Shaikh Akram**  
+*   GitHub: [@Akram-X207](https://github.com/Akram-X207)
+*   Portfolio: [Akram-X207.github.io](https://Akram-X207.github.io/) (if applicable)
+
+---
+*Powered by Ultralytics YOLOv11*
