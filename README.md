@@ -86,13 +86,6 @@ This project is **Open Source** and I welcome contributions! Whether it's fixing
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
----
-
-## 👨‍💻 Developed By
-
-**Shaikh Akram**  
-*   GitHub: [@Akram-X207](https://github.com/Akram-X207)
-*   Portfolio: [Akram-X207.github.io](https://Akram-X207.github.io/) (if applicable)
 
 ---
 *Powered by Ultralytics YOLOv11*
